@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/philip-morris-89/node/issues"
   },
-  "homepage": "https://github.com/philip-morris-89/node#readme"
+  "homepage": "https://github.com/philip-morris-89/node#readme",
+  "dependencies": {
+    "figlet": "^1.5.2"
+  }
 }
