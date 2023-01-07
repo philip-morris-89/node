@@ -1,10 +1,10 @@
-import figlet from 'figlet';
+import figlet from "figlet";
 
-figlet('Filippo', function(err, data) {
-    if (err) {
-        console.log('Something went wrong...');
-        console.dir(err);
-        return;
-    }
-    console.log(data)
+figlet("Filippo", function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
 });

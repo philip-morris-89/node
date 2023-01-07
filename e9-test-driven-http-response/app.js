@@ -9,7 +9,6 @@ function createApp() {
     const htmlResponseBody = "Welcome to the World Wide Web!";
 
     response.end(`<html><body><h1>${htmlResponseBody}</h1></body></html>`);
-
   });
 }
 
