@@ -14,5 +14,9 @@ test("GET /", async () => {
     .expect(200)
     .expect("Content-Type", "text/html");
 
-  expect(response.text.includes(`<html><body><h1>${htmlResponseBody}</h1></body></html>`))
+  expect(
+    response.text.includes(
+      `<html><body><h1>${htmlResponseBody}</h1></body></html>`
+    )
+  );
 });
