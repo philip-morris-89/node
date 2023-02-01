@@ -1,7 +1,11 @@
 import multer from "multer";
 
-export const multerOption = {};
+const storage = multer.diskStorage({
+  destination: "uploads/",
+});
+
+export const multerOptions = {};
 
 export const initMulterMiddleware = () => {
-  return multer(multerOption);
+  return multer({ storage, ...multerOptions });
 };
