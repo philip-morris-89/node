@@ -81,11 +81,24 @@ app.post(
       return next("No photo file uploaded.");
     }
 
+    const planetId = Number(request.params.id);
     const photoFilename = request.file.filename;
+
+    try {
+      await prisma.planet.update({
+        where: { id: planetId },
+        data: { photoFilename },
+      });
+    } catch (error) {
+      response.status(404);
+      next(`Cannot POST /planets/${planetId}/photo`);
+    }
 
     response.status(201).json({ photoFilename });
   }
 );
+
+app.use("/planets/photos", express.static("uploads"));
 
 app.listen(3000, () => {
   console.log("Running on port", 3000);
